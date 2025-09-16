@@ -1,0 +1,18 @@
+<div class="main-container">
+   <app-navbar></app-navbar>
+
+    <div class="image-slider">
+        <div class="slider">
+            <div *ngFor="let slide of slides; let i = index" class="slide"
+                [ngClass]="{'active': i === currentSlide, 'fade-out': i === previousSlide}"
+                [style.backgroundImage]="'url(' + slide.image + ')'">
+                <div class="t">
+                    <div class="slide-text">{{ slide.text }}</div>
+                    <div class="slide-texts">{{ slide.para }}</div>
+                    <div class="button">{{slide.button}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <app-hijab-collection></app-hijab-collection> <app-abaya-collection></app-abaya-collection>
+<app-eid-collection></app-eid-collection> <app-footer></app-footer>

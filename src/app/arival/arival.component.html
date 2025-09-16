@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<!-- Hijab Collection Section -->
+<div class="container">
+  <div class="hijab">
+    <h1>Modal Hijab</h1>
+  </div>
+
+  <div class="model">
+    <p>24 Products</p>
+  </div>
+
+  <div class="line"></div>
+
+  <!-- Product Slider -->
+  <div class="image-slider">
+    <div class="image-slider-track">
+
+      <div class="product-card" *ngFor="let item of items; let i = index">
+        <img [src]="item.image" [alt]="item.name" class="product-img" #productImg>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price }}</p>
+        <span class="rating">★★★★★ <small>(4.7)</small></span>
+        <button class="add-to-cart" (click)="addToCart(productImg, i)">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>    
+</div>
+
+<!-- Cart Icon -->
+<div class="shopping-cart" #cartIcon>
+  🛒 <span class="cart-count">{{ cartCount }}</span>
+</div>
+
+<app-footer></app-footer>
