@@ -1,0 +1,50 @@
+<div class="navs">
+    <div class="top">
+        <p>15% OFF USING CODE : HAWAA15</p>
+    </div>
+
+    <div class="nav">
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="https://arabesque-elegance.co.uk/cdn/shop/files/Arabesque-Final-Logo.ai_500x.png?v=1679177291"
+                    alt="Logo" />
+            </div>
+
+            <!-- Hamburger Button (Mobile) -->
+            <div class="menu-toggle" (click)="toggleMenu()">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="navlinks" [class.active]="menuOpen">
+                <ul>
+                    <li><a (click)="navigateWithLoader('/zmcollectionhome')">NEW ARRIVALS</a></li>
+                    <li><a (click)="navigateWithLoader('/arival')">HIJABS</a></li>
+                    <li><a (click)="navigateWithLoader('/abayas')">ABAYAS</a></li>
+                    <li><a (click)="navigateWithLoader('/accessories')">ACCESSORIES</a></li>
+                    <li><a (click)="navigateWithLoader('/contact')">CONTACT US</a></li>
+                    <li class="icons">
+                        <i class="bi bi-person"></i>
+                        <i class="bi bi-search"></i>
+                        <i class="bi bi-bag"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Loader -->
+            <div *ngIf="loading" class="loader-overlay">
+                <div class="loader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+app-abaya

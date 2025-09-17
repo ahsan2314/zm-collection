@@ -1,0 +1,143 @@
+.hijab {
+    font-family: system_ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.4px;
+    color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.model {
+    font-family: system_ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 32.7346px;
+    font-weight: 400;
+    line-height: 38.8285px;
+    color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    background-color: black;
+    height: 2px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    /* hide overflow */
+    margin-top: 50px;
+}
+
+.image-slider-track {
+    display: flex;
+    gap: 30px;
+    animation: slide 20s linear infinite;
+    /* smooth infinite sliding */
+}
+
+.image-slider-track img {
+    width: 450px;
+    height: 550px;
+    cursor: pointer;
+}
+
+/* Animation for sliding */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.product-card {
+  text-align: center;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin: 0 0 5px;
+}
+
+.product-card .rating {
+  display: block;
+  font-size: 14px;
+  color: #ff9900; /* Gold color for stars */
+}
+
+.product-card .rating small {
+  font-size: 12px;
+  color: #666;
+}
+button {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 2px solid black;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: black;
+  z-index: -1;
+}
+
+button:hover, button:focus {
+  color: white;
+}
+
+button:hover:before, button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}

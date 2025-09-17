@@ -1,0 +1,200 @@
+.hijab {
+    font-family: system_ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.4px;
+    color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.model {
+    font-family: system_ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 32.7346px;
+    font-weight: 400;
+    line-height: 38.8285px;
+    color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    background-color: black;
+    height: 2px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.main-container {
+    margin-top: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 20px;
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 90%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e63946;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 10px;
+}
+
+.product-info {
+    padding: 12px;
+    text-align: left;
+}
+
+.price {
+    margin-bottom: 6px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.new-price {
+    color: #e63946;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.product-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.4;
+}
+
+.product-grid {
+    margin-top: 70px;
+}
+
+.product-title:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 2px solid black;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: black;
+    z-index: -1;
+}
+
+button:hover,
+button:focus {
+    color: white;
+}
+
+button:hover:before,
+button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.line {
+    background-color: black;
+    height: 2px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+img {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+    /* thoda neeche + chhota */
+    filter: blur(8px);
+    /* blur se dramatic effect */
+    transition:
+        opacity 1s ease-out,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        /* thoda bounce */
+        filter 0.8s ease-out;
+}
+
+img.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    /* apni jagah normal size */
+    filter: blur(0);
+}
