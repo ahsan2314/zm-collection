@@ -6,8 +6,6 @@ import { ACCESSORIESComponent } from './accessories/accessories.component';
 import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
-    {path: '', redirectTo: 'app-zm-collection-home', pathMatch: 'full' },
-    // {path: 'app-zm-collection-home', loadComponent: () => import('./zm-collection-home/zm-collection-home.component').then(c => c.ZmCollectionHomeComponent) },
     { path: 'arival', component: ArivalComponent },
     {path: 'abayas',component: AbayasComponent},
     {path:'zmcollectionhome',component:ZmCollectionHomeComponent},
