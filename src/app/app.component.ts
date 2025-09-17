@@ -6,7 +6,7 @@ import { ZmCollectionHomeComponent } from './zm-collection-home/zm-collection-ho
 @Component({
   selector: 'app-root',
   standalone: true,              // ✅ Standalone component ke liye zaroori
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet,CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']   // ✅ correct spelling, array
 })
