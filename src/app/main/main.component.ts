@@ -1,30 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HijabCollectionComponent } from '../hijab-collection/hijab-collection.component';
-import { FooterComponent } from '../footer/footer.component';
 import { AbayaCollectionComponent } from '../abaya-collection/abaya-collection.component';
+import { FooterComponent } from '../footer/footer.component';
 import { EidCollectionComponent } from '../eid-collection/eid-collection.component';
-import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
-  selector: 'app-zm-collection-home',
-  standalone: true,
-  templateUrl: './zm-collection-home.component.html',
-  styleUrls: ['./zm-collection-home.component.css'],
-  imports: [
-    CommonModule,
-    RouterModule,
-    HijabCollectionComponent,
-    FooterComponent,
-    AbayaCollectionComponent,
-    EidCollectionComponent,
-    NgFor,
-    NavbarComponent
-  ],
+  selector: 'app-main',
+  standalone:true,
+  imports: [CommonModule,RouterModule,HijabCollectionComponent,AbayaCollectionComponent,FooterComponent,EidCollectionComponent],
+  templateUrl: './main.component.html',
+  styleUrl: './main.component.css'
 })
-export class ZmCollectionHomeComponent implements OnInit {
-  slides = [
+export class MainComponent {
+slides = [
     {
       image: 'https://us.hawaaclothing.com/cdn/shop/files/HAWAA_2013.jpg?v=1756822870&width=1400',
       text: 'Luxury Hijab Collection',
